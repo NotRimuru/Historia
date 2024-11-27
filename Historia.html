@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "Historia.css">
+    <script src="Historia.js"></script>
+</head>
+<body class = "no-select">
+    <div id = "tabela-transakcji">
+        <div class = "data pojemnik-transakcji">Data</div>
+        <div class = "nazwa pojemnik-transakcji">Nazwa</div>
+        <div class = "kategoria pojemnik-transakcji">Kategoria</div>
+        <div class = "kwota pojemnik-transakcji">Kwota</div>
+    </div>
+    <div id = "lista-transakcji"></div>
+    <script>
+        let saldo = 5000;
+        let transakcje = [];
+        let sortowanie = ['data', 'malejaco', 0];
+        wygenerujTransakcje(100, 'losowo');
+        wyswietlTransakcje(transakcje);
+
+        const tabela = document.getElementById('tabela-transakcji');
+        for(const div of tabela.children){
+            sortujPoKliknieciu(div);
+        }
+    </script>
+</body>
+</html>

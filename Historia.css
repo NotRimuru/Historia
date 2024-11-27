@@ -1,0 +1,77 @@
+body {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#tabela-transakcji{
+    display: flex;
+    height: 5lvh;
+    width: 40lvw;
+    margin-top: 10lvh;
+    margin-left: 20lvw;
+    align-items: center;
+}
+
+.transakcja{
+    width: 100%;
+    display: flex;
+}
+
+.pojemnik-transakcji{
+    height: 5lvh;
+    text-align: left;
+    align-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.data{width: 25%;}
+.nazwa{width: 25%;}
+.kategoria{width: 30%;}
+
+#tabela-transakcji > .pojemnik-transakcji::after{
+    content: var(--tekst, "");
+    height: 5lvh;
+    aspect-ratio: 1;
+    align-content: center;
+}
+
+.kwota{
+    width: 20%;
+    justify-content: right;
+    padding-right: 2lvw;
+    padding-left: 0lvw;
+}
+
+.obrazek{
+    height: 5lvh;
+    width: 5lvh;
+    justify-content: center;
+}
+
+#lista-transakcji{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40lvw;
+    height: 50lvh;
+    overflow-y: scroll;
+    margin-left: 20lvw;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
